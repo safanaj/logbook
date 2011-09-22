@@ -1,0 +1,19 @@
+Source: logbook
+Section: python
+Priority: extra
+Build-Depends: debhelper (>= 7.0.50~), quilt
+Build-Depends-Indep: python-support (>= 1.0)
+Maintainer: Marco Bardelli <marco.bardelli@servabit.it>
+Standards-Version: 3.8.0
+XS-Python-Version: >= 2.6
+
+Package: python-logbook
+Section: python
+Priority: extra
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Provides: ${python:Provides}
+Description: Logbook is a nice logging replacement, but still under development.
+ It should be easy to setup, use and configure and support web applications :)
+ .
+ For more information look at http://logbook.pocoo.org/

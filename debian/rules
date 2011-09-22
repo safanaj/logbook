@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+override_dh_auto_test:
+	@echo Do nothing for testing ...
+
+override_dh_auto_build:
+	@echo Do nothing for building ...
+
+override_dh_auto_install:
+	python setup.py install --install-layout=deb --no-compile --root=$(CURDIR)/debian/tmp
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf build dist Logbook.egg-info cover logbook/_speedups.c logbook/_speedups.so
+
+%:
+	dh $@
+
